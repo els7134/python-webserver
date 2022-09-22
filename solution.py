@@ -52,9 +52,9 @@ def webServer(port=13331):
             #connectionSocket.close()
             for i in f:  # for line in file
                 # Fill in start - send your html file contents #Fill in end
-                print(f.readline())
+                #print(f.readline())
                 connectionSocket.send(f.readline().encode())
-                #connectionSocket.close()  # closing the connection socket
+            connectionSocket.close()  # closing the connection socket
 
         except Exception as e:
             # Send response message for invalid request due to the file not being found (404)
